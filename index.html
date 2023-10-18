@@ -51,13 +51,56 @@
   
       }
 
-      footer {
-        color:#ff6933;
-        font-size: 15px;
-        margin-left: 400px;
+      label {
+        color:#4dbba6;
+        font-size: 30px;
+        font-style: normal;
       }
       
+      /*input[type="text"] {
+      width: 200px;
+      }*/
+      /*.resultado {
+        color:#ff6933;
+        font-size: 20px;
+      }*/
+      textarea {
+      padding: 10px;
+      max-width: 100%;
+      line-height: 1.5;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-shadow: 1px 1px 1px #999;
+      }
+      button {
+      background-color: #ff6933;
+      border: none;
+      color:#c6e7e1 ;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      }
+      footer {
+        color:#ff6933;
+        font-size: 20px;
+        margin-left: 400px;
+      }
 
+      .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .column {
+        flex-direction: column;
+      }
+
+      .row { 
+        flex-direction: row;
+      }
     </style>
   </head>
   <body>
@@ -66,8 +109,10 @@
     <p class="frase">(juntado de cartas para amores que ainda não existem)</p>
     <p class="line">___________________________________________________________________________________________________</p>
    <!-- <audio src= "audio gabriel nabuco.ogg" type= "audio/ogg" alt="audio carta 2">-->
-    <img class="carta1"src="primeiracarta.jpeg" alt="carta 1" float="left">
-    <img class="carta2" src="carta02.jpg" alt="carta 2" float="right">
+    <div class="flex-center row">
+      <img class="carta1"src="primeiracarta.jpeg" alt="carta 1" float="left">
+      <img class="carta2" src="carta02.jpg" alt="carta 2" float="right"> <br></br><br></br>
+    </div>
     <!--
     <a
       target="_blank"
@@ -84,12 +129,46 @@
       href="mailto:amormeufuturoamor@gmail.com"
       >Envie aqui sua carta para um futuro amor</a
       -->
-    
+      <div class="flex-center column">
+        <form id="form-carta">
+          <div class="flex-center">
+            <label for="txt-carta"> Escreva aqui a sua carta para um futuro amor</label>
+          </div>
+          <br></br>
+          <textarea type="text" id="txt-carta" class="caixa" name="carta" maxlength="6000" rows="10" cols="100" required></textarea>
+          <br></br>
+          <div class="flex-center">
+            <button type="submit">Enviar para o futuro</button>
+          </div>
+        </form>
+        <p id="resultado"> 
+        </div>
       <footer>
         <p>Para um amor existir no futuro, primeiro é preciso imaginá-lo</p>
       </footer>
     <script>
-    
+      const form = document.getElementById("form-carta")
+
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const formData = new FormData(this);
+        const entries = formData.entries();
+        const data = Object.fromEntries(entries);
+
+        console.log({ data })
+
+        fetch("/", {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        })
+          .then(res => { 
+            document.getElementById("resultado").innerHTML = "Carta enviada!"
+          })
+          .catch(/**/);
+      });
     </script>
   </body>
 </html>

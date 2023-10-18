@@ -1,10 +1,28 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
+const { parse } = require("querystring");
 
 const server = http.createServer((req, res) => {
+  if (req.method === 'POST') {
+    let body = '';
+    req.on('data', chunk => {
+        body += chunk
+    });
+    req.on('end', () => {
+        const parsedBody = JSON.parse(body)
+        console.log("TODO: Save to DB")
+        console.log({ parsedBody })
+        res.end('OK');
+    });
+
+    res.setHeader("Content-Type", "application/json");
+    res.statusCode = 201;
+    return
+  } 
+
   // Parse the request URL to determine which file to serve
-  const url = req.url === "/" ? "/amormeufuturoamor.html" : req.url;
+  const url = req.url === "/" || req.url.includes("/?enviado") ? "/index.html" : req.url;
   const filePath = path.join(__dirname, url);
 
   // Check if the file exists
