@@ -1,0 +1,10 @@
+{
+  "name": "amfa",
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "bun-types": "latest"
+  },
+  "scripts": {
+    "dev": "nodemon server.js"
+  }
+}
