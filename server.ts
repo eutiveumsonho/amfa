@@ -21,13 +21,8 @@ async function handler(req: Request): Promise<Response> {
         .collection("letters")
         .insertOne({ ...parsedBody, createdAt: new Date().toISOString() });
 
-      if (result.acknowledged) {
-        console.log({ result });
-        return new Response("Ok", { status: 201 });
-      } else {
-        console.error({ result });
-        return new Response("Internal Server Error", { status: 500 });
-      }
+      console.log({ result });
+      return new Response("Ok", { status: 201 });
     } catch (error) {
       console.error(error);
       return new Response("Internal Server Error", { status: 500 });
