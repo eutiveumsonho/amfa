@@ -22,12 +22,14 @@ async function handler(req: Request): Promise<Response> {
         .insertOne({ ...parsedBody, createdAt: new Date().toISOString() });
 
       if (result.acknowledged) {
+        console.log({ result });
         return new Response("Ok", { status: 201 });
       } else {
+        console.error({ result });
         return new Response("Internal Server Error", { status: 500 });
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
       return new Response("Internal Server Error", { status: 500 });
     }
   }
@@ -49,7 +51,7 @@ async function handler(req: Request): Promise<Response> {
       }),
     });
   } catch (error) {
-    console.log(error);
+    console.error(error);
     new Response("Not Found", { status: 404 });
   }
 
