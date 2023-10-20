@@ -1,11 +1,9 @@
-import { load } from "https://deno.land/std@0.204.0/dotenv/mod.ts";
+import "https://deno.land/std@0.204.0/dotenv/load.ts";
 import { MongoClient } from "https://deno.land/x/mongo@v0.32.0/mod.ts";
-
-const env = await load();
 
 // In case you are having issues connecting to the database, please
 // take a look at https://github.com/denodrivers/mongo/issues/206#issuecomment-864509720
-const MONGODB_URI = env["MONGODB_URI"];
+const MONGODB_URI = Deno.env.get("MONGODB_URI");
 
 if (!MONGODB_URI) {
   throw new Error(
@@ -14,7 +12,7 @@ if (!MONGODB_URI) {
 }
 
 async function handler(req: Request): Promise<Response> {
-  const client = await new MongoClient().connect(MONGODB_URI);
+  const client = await new MongoClient().connect(MONGODB_URI!);
 
   if (req.method === "POST") {
     try {
