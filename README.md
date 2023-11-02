@@ -1,4 +1,10 @@
-# AMFA - Amor, meu futuro amor
+# AMFA - Amor, meu futuro amor <!-- omit from toc -->
+
+- [OVERVIEW](#overview)
+- [KEY FEATURES](#key-features)
+  - [Letter submission:](#letter-submission)
+  - [Public viewing:](#public-viewing)
+- [DEVELOPMENT](#development)
 
 ## OVERVIEW
 
