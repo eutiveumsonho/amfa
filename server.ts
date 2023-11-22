@@ -34,6 +34,8 @@ async function handler(req: Request): Promise<Response> {
   const filePath = url.pathname === "/" ? "/index.html" : url.pathname;
   const absPath = `${Deno.cwd()}/${filePath}`;
 
+  const isCSS = filePath.startsWith('/lib') || filePath.startsWith('/public') ? true : false
+
   try {
     const file = await Deno.open(absPath);
     const fileInfo = await Deno.stat(absPath);
@@ -41,7 +43,7 @@ async function handler(req: Request): Promise<Response> {
     return new Response(file.readable, {
       status: 200,
       headers: new Headers({
-        "Content-Type": "text/html",
+        "Content-Type": isCSS ? "text/css" : "text/html",
         "Content-Length": fileInfo.size.toString(),
       }),
     });
