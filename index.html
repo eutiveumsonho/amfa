@@ -8,6 +8,7 @@
     />
     <link rel="stylesheet" href="./lib/style.css" />
     <link rel="stylesheet" href="./public/SpecialElite-Regular.ttf" />
+    <script async src="./lib/script.js"></script>
   </head>
   <body>
     <div class="main-container flex column">
@@ -30,19 +31,59 @@
     <br />
     <br />
     <div class="bttn-container">
-      <button class="bttn-1">
+      <button class="bttn-1" id="about-bttn">
         <div class="overlap-group">
           <div class="buttn-1-text">sobre</div>
-          <!-- <div class="popup" onclick="myFunction()">
-            <span class="popuptext" id="myPopup">Popup text...</span> -->
         </div>
       </button>
+      <div id="aboutModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close" id="closeAbout">&times;</span>
+          <p id="about-content">
+            O AMFA é uma instalação artística virtual que compila cartas de
+            pessoas para o futuro amor, ou o grande amor. Se extende como uma
+            intervenção urbana, que espalha lambes dessas cartas pela cidade. O
+            projeto nasce na cidade de Salvador - Bahia, e invoca seus
+            interlocutores (e possíveis futuros colaboradores) a compartilharem
+            perspectivas poéticas da idéia, (ou existência), de
+            futuros/possíveis/grandes amores.
+          </p>
+        </div>
+      </div>
       <br />
-      <button class="bttn-2">
+      <br />
+      <button class="bttn-2" id="write-bttn">
         <div class="overlap-group">
           <div class="bttn-2-text">envie sua carta</div>
         </div>
       </button>
+      <div id="formModal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="closeForm">&times;</span>
+          <div class="form-container flex column" id="form-content">
+            <form id="form-letter" class="form flex column">
+              <label for="txt-area" class="statement">
+                Escreva aqui a sua carta para um futuro amor</label
+              >
+              <br />
+              <textarea
+                type="text"
+                id="txt-area"
+                class="box"
+                name="letter"
+                maxlength="6000"
+                rows="10"
+                cols="100"
+                required
+              ></textarea>
+              <br />
+              <button class="bttn-3" type="submit">Enviar para o futuro</button>
+            </form>
+            <p id="result"></p>
+          </div>
+        </div>
+      </div>
     </div>
     <br />
     <div id="grid-container" class="grid flex column">
@@ -56,69 +97,11 @@
       <div id="post8"></div>
     </div>
   </body>
-  <div class="form-container flex column">
-    <form id="form-letter" class="form flex column">
-      <label for="txt-area" class="statement">
-        Escreva aqui a sua carta para um futuro amor</label
-      >
-      <br />
-      <textarea
-        type="text"
-        id="txt-area"
-        class="box"
-        name="letter"
-        maxlength="6000"
-        rows="10"
-        cols="100"
-        required
-      ></textarea>
-      <br />
-      <button class="bttn-3" type="submit">Enviar para o futuro</button>
-    </form>
-    <p id="result"></p>
-  </div>
-
   <footer>
     <div class="footer flex column">
       <p class="poetry">
         Para um amor existir no futuro, primeiro é preciso imaginá-lo.
       </p>
-      <p class="about">
-        O AMFA é uma instalação artística virtual que compila cartas de pessoas
-        para o futuro amor, ou o grande amor, e também uma intervenção urbana,
-        que espalha lambes dessas cartas pela cidade. O projeto nasce na cidade
-        de Salvador - Bahia, e invoca seus interlocutores (e possíveis futuros
-        colaboradores) a compartilharem perspectivas poéticas da idéia, (ou
-        existência), de futuros/possíveis/grandes amores.
-      </p>
     </div>
   </footer>
-  <script>
-    /* function myFunction() {
-        var popup = document.getElementById("myPopup");
-          popup.classList.toggle("show");
-      } */
-    const form = document.getElementById("form-letter");
-
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      const formData = new FormData(this);
-      const entries = formData.entries();
-      const data = Object.fromEntries(entries);
-
-      console.log({ data });
-
-      fetch("/", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-        .then((res) => {
-          document.getElementById("result").innerHTML = "Carta enviada!";
-        })
-        .catch(/**/);
-    });
-  </script>
 </html>
