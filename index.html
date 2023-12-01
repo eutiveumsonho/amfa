@@ -6,6 +6,7 @@
       content="width=device-width, initial-scale=1.0"
       user-scalable="no"
       charset="UTF-8"
+      lang="pt-BR"
     />
     <link rel="stylesheet" href="./lib/style.css" />
     <link rel="stylesheet" href="./public/SpecialElite-Regular.ttf" />
@@ -37,11 +38,13 @@
           <div class="buttn-1-text">sobre</div>
         </div>
       </button>
-      <div id="aboutModal" class="modal">
-        <!-- Modal content -->
+      <div id="about-modal" class="modal">
         <div class="modal-content">
-          <span class="close" id="closeAbout">&times;</span>
-          <p id="about-content">
+          <div class="modal-header" id="modal-header1">
+            <!-- Modal content -->
+              <span class="close" id="close-about">&times;</span>
+          </div>
+            <p id="about-content">
             O AMFA é uma instalação artística virtual que compila cartas de
             pessoas para o futuro amor, ou o grande amor. Se extende como uma
             intervenção urbana, que espalha lambes dessas cartas pela cidade. O
@@ -59,9 +62,11 @@
           <div class="bttn-2-text">envie sua carta</div>
         </div>
       </button>
-      <div id="formModal" class="modal">
+      <div id="form-modal" class="modal">
         <div class="modal-content">
-          <span class="close" id="closeForm">&times;</span>
+          <div class="modal-header" id="modal-header2">
+            <span class="close" id="close-form">&times;</span>
+          </div>
           <div class="form-container flex column" id="form-content">
             <form id="form-letter" class="form flex column">
               <label for="txt-area" class="statement">
@@ -77,6 +82,8 @@
                 rows="10"
                 cols="100"
                 required
+                spellcheck="false"
+      
               ></textarea>
               <br />
               <button class="bttn-3" type="submit">Enviar para o futuro</button>

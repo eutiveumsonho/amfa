@@ -48,11 +48,12 @@ body {
 }
 
 .main-container .title-red {
-  color: #dd4d19;
+  color:#dd4d19 
 }
 
 .main-container .title-blue {
-  color: #4dbba6;
+  color:rgb(6, 190, 129);
+  /* color: #4dbba6 */
 }
 
 .main-container .title-space {
@@ -179,12 +180,33 @@ body {
 }
 
 .box {
-  width: 18.875rem;
-  height: 9.375rem;
+  margin-top: 2rem;
+  width: 13.875rem;
+  height: 7.805rem;
   border-radius: 0.313rem;
-  box-shadow: 0.25rem 0.25rem 0.25rem #00000040,
-    0.25rem 0.25rem 0.25rem #00000052;
+  box-shadow: 0.25rem 0.25rem 0.25rem #dd4d19,
+    0.25rem 0.25rem 0.25rem #e27c57;
   resize: vertical;
+  padding:2%;
+  font-size:1.2rem;
+  font-family: SpecialElite;
+  border:0.2rem dashed #dd4d19;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.4rem;
+  line-height: 1.4rem;
+}
+
+.box:hover,
+.box:focus {
+  color: #e27c57;
+  outline: none !important;
+  border-color: #4dbba6;
+  box-shadow: 0 0 10px #4dbba6;
+}
+
+::selection {
+  color:white;
+  background-color: #e27c57;
 }
 
 .bttn-3 {
@@ -196,12 +218,13 @@ body {
   font-size: 1.25rem;
   font-weight: 20;
   text-shadow: 0.313rem 0.313rem 0.313rem #00000050;
-  width: 12.5rem;
+  width: 10rem;
   height: 4.063rem;
   border-color: transparent;
   border-radius: 0.063rem;
   position: relative;
   top: 0.625rem;
+  margin-top: 1rem;
 }
 
 .poetry {
@@ -215,8 +238,14 @@ body {
   margin-bottom: 15rem;
 }
 
+#modal-header1 {
+  margin: auto 9%;
+  align-items: center;
+
+}
+
 /* The Modal (background) 1*/
-#aboutModal {
+#about-modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -259,24 +288,38 @@ body {
 depois, colocar o close dentro de uma div. no css, definir o display como flex, e justify content para a direita. */
 
 /* The Close Button 1*/
-#closeAbout {
+#close-about {
   color: #aaa;
   float: right;
   font-size: 2.5rem;
-  font-weight: bold;
+  text-align: center;
+  line-height: 2.1rem;
   position: relative;
-  left: -2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-color: #aaa;
+  border-radius: 90rem; 
+  border-style:dotted;
+  top: 0.4rem;
+  margin-right: -0.6rem;
+  align-self: center;
+  justify-content: center;
 }
 
-#closeAbout:hover,
-#closeAbout:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+#close-about:hover,
+#close-about:focus {
+  color:#dd4d19;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+#modal-header2{
+  margin: auto 15%;
+  align-items: center;
 }
 
 /* The Modal (background) 2 */
-#formModal {
+#form-modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -292,10 +335,11 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
 /* Modal Content/Box 2*/
 #form-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 5% auto; /* 15% from the top and centered */
   padding: 1.25rem;
   border: 0.063rem solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 65%; /* Could be more or less, depending on screen size */
+  height: 50%;
   box-shadow: 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2),
     0 0.374rem 1.25rem 0 rgba(0, 0, 0, 0.19);
   animation-name: animateopac;
@@ -303,18 +347,28 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
 }
 
 /* The Close Button 2*/
-#closeForm {
+#close-form {
   color: #aaa;
   float: right;
   font-size: 2.5rem;
-  font-weight: bold;
+  text-align: center;
+  line-height: 2.1rem;
   position: relative;
-  left: -2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-color: #aaa;
+  border-radius: 90rem; 
+  border-style:dotted;
+  top: 0.4rem;
+  margin-right: -0.2rem;
+  align-self: center;
+  justify-content: center;
+  
 }
 
-#closeForm:hover,
-#closeForm:focus {
-  color: black;
+#close-form:hover,
+#close-form:focus {
+  color:#dd4d19;
   text-decoration: none;
   cursor: pointer;
 }
@@ -346,7 +400,19 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     width: 9.5rem;
     height: 9.5rem;
   }
+
+  #close-form {
+    top: 0.4rem;
+    margin-right: 0.1rem;
+    }
+
+  .box {
+    width: 16.875rem;
+    height: 9.493rem;
+  }
+
 }
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) OK */
 @media only screen and (min-width: 600px) {
@@ -399,6 +465,16 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     height: 15.5rem;
   }
 
+  #close-about {
+    top: 0.4rem;
+    margin-right: -0.3rem;
+    }  
+    
+  #close-form {
+     top: 0.4rem;
+     margin-right: 0.45rem;
+    }
+
   .statement {
     font-size: 2rem;
     line-height: 2.5rem;
@@ -406,10 +482,10 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
   }
 
   .box {
-    width: 34.875rem;
-    height: 20.375rem;
+    width: 24.875rem;
+    height: 11.375rem; 
   }
-
+ 
   .bttn-3 {
     font-size: 2rem;
     width: 21.5rem;
@@ -458,15 +534,25 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     height: 25.5rem;
   }
 
+  #close-about {
+    top: 0.4rem;
+    margin-right: -0.1rem;
+    }
+
+  #close-form {
+    top: 0.4rem;
+    margin-right: 0.9rem;
+    }
+
   .statement {
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 4rem;
     word-spacing: 0.9rem;
   }
 
   .box {
-    width: 53.875rem;
-    height: 27.375rem;
+    width: 37.875rem;
+    height: 15.375rem;
   }
 
   .bttn-3 {
@@ -511,7 +597,7 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     width: 20rem;
     height: 5.5rem;
     font-size: 3.5rem;
-    top: -36.5rem;
+    top: -37.5rem;
     left: -0.5rem;
     position: absolute;
     border-radius: 0.5rem;
@@ -522,7 +608,7 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     width: 28rem;
     height: 6rem;
     font-size: 2.5rem;
-    top: -44.55rem;
+    top: -45.55rem;
     left: -2.5rem;
     position: absolute;
     border-radius: 0.5rem;
@@ -540,22 +626,37 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     height: 14.5rem;
   }
 
+  #modal-content {
+    width: 50%; /* Full width */
+    height: 40%; /* Full height */
+  }
+
+  #close-about {
+  top: 0.4rem;
+  margin-right: 0.1rem;
+  }
+
+  #close-form {
+    top: 0.4rem;
+    margin-right: 1.3rem;
+    }
+
   .statement {
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: 2.5rem;
     word-spacing: 0.5rem;
   }
 
   .box {
-    margin-top: 5rem;
-    width: 50.875rem;
-    height: 20.375rem;
+    margin-top: 2rem;
+    width: 35.875rem;
+    height: 18.375rem;
   }
 
   .bttn-3 {
     font-size: 2rem;
     width: 21.5rem;
     height: 7.063rem;
-    margin-top: 2rem;
+    margin-top: 0rem;
   }
 }
