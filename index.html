@@ -39,12 +39,9 @@
         </div>
       </button>
       <div id="about-modal" class="modal">
-        <div class="modal-content">
-          <div class="modal-header" id="modal-header1">
-            <!-- Modal content -->
-              <span class="close" id="close-about">&times;</span>
-          </div>
-            <p id="about-content">
+         <!-- Modal content -->
+        <p id="about-content">
+          <span class="close" id="close-about">&times;</span>
             O AMFA é uma instalação artística virtual que compila cartas de
             pessoas para o futuro amor, ou o grande amor. Se extende como uma
             intervenção urbana, que espalha lambes dessas cartas pela cidade. O
@@ -52,8 +49,7 @@
             interlocutores (e possíveis futuros colaboradores) a compartilharem
             perspectivas poéticas da idéia, (ou existência), de
             futuros/possíveis/grandes amores.
-          </p>
-        </div>
+        </p>
       </div>
       <br />
       <br />
@@ -63,36 +59,30 @@
         </div>
       </button>
       <div id="form-modal" class="modal">
-        <div class="modal-content">
-          <div class="modal-header" id="modal-header2">
-            <span class="close" id="close-form">&times;</span>
-          </div>
-          <div class="form-container flex column" id="form-content">
-            <form id="form-letter" class="form flex column">
-              <label for="txt-area" class="statement">
-                Escreva aqui a sua carta para um futuro amor</label
-              >
-              <br />
-              <textarea
-                type="text"
-                id="txt-area"
-                class="box"
-                name="letter"
-                maxlength="6000"
-                rows="10"
-                cols="100"
-                required
-                spellcheck="false"
-      
-              ></textarea>
-              <br />
-              <button class="bttn-3" type="submit">Enviar para o futuro</button>
-            </form>
-            <p id="result"></p>
-          </div>
+        <span class="close" id="close-form">&times;</span>
+        <div class="form-container flex column" id="form-content">
+          <form id="form-letter" class="form flex column">
+            <label for="txt-area" class="statement">
+              Escreva aqui a sua carta para um futuro amor</label
+            >
+            <br />
+            <textarea
+              type="text"
+              id="txt-area"
+              class="box"
+              name="letter"
+              maxlength="6000"
+              rows="10"
+              cols="100"
+              required
+              spellcheck="false"
+             ></textarea>
+            <br />
+            <button class="bttn-3" type="submit">Enviar para o futuro</button>
+          </form>
+          <p id="result"></p>
         </div>
       </div>
-    </div>
     <br />
     <div id="grid-container" class="grid flex column">
       <div id="post1"></div>

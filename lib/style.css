@@ -166,6 +166,8 @@ body {
   flex-direction: column;
 }
 
+
+
 #form-letter {
   font-size: 0.938rem;
   color: #dd4d19;
@@ -238,11 +240,12 @@ body {
   margin-bottom: 15rem;
 }
 
-#modal-header1 {
+
+/* #modal-header1 {
   margin: auto 9%;
   align-items: center;
 
-}
+} */
 
 /* The Modal (background) 1*/
 #about-modal {
@@ -264,7 +267,7 @@ body {
   margin: 15% auto; /* 15% from the top and centered */
   padding: 1.25rem;
   border: 0.063rem solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 70%; /* Could be more or less, depending on screen size */
   color: #dd4d19;
   text-shadow: 0.25rem 0.25rem 0.25rem #00000034;
   text-align: center;
@@ -300,10 +303,6 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
   border-color: #aaa;
   border-radius: 90rem; 
   border-style:dotted;
-  top: 0.4rem;
-  margin-right: -0.6rem;
-  align-self: center;
-  justify-content: center;
 }
 
 #close-about:hover,
@@ -314,8 +313,7 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
 }
 
 #modal-header2{
-  margin: auto 15%;
-  align-items: center;
+  margin: 15% auto;
 }
 
 /* The Modal (background) 2 */
@@ -338,8 +336,8 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
   margin: 5% auto; /* 15% from the top and centered */
   padding: 1.25rem;
   border: 0.063rem solid #888;
-  width: 65%; /* Could be more or less, depending on screen size */
-  height: 50%;
+  width: 80%; /* Could be more or less, depending on screen size */
+  height: 80%;
   box-shadow: 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2),
     0 0.374rem 1.25rem 0 rgba(0, 0, 0, 0.19);
   animation-name: animateopac;
@@ -400,6 +398,7 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     width: 9.5rem;
     height: 9.5rem;
   }
+
 
   #close-form {
     top: 0.4rem;
@@ -465,11 +464,7 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     height: 15.5rem;
   }
 
-  #close-about {
-    top: 0.4rem;
-    margin-right: -0.3rem;
-    }  
-    
+
   #close-form {
      top: 0.4rem;
      margin-right: 0.45rem;
@@ -534,10 +529,6 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     height: 25.5rem;
   }
 
-  #close-about {
-    top: 0.4rem;
-    margin-right: -0.1rem;
-    }
 
   #close-form {
     top: 0.4rem;
@@ -626,10 +617,6 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     height: 14.5rem;
   }
 
-  #modal-content {
-    width: 50%; /* Full width */
-    height: 40%; /* Full height */
-  }
 
   #close-about {
   top: 0.4rem;
