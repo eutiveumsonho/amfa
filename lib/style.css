@@ -339,7 +339,7 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
   padding: 1.25rem;
   border: 0.063rem solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
-  height: 50%;
+  height: fit-content;
   box-shadow: 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2),
     0 0.374rem 1.25rem 0 rgba(0, 0, 0, 0.19);
   animation-name: animateopac;
@@ -406,7 +406,6 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
   #form-content {
     margin: 10% auto; /* 5% from the top and centered */
     width: 75%; /* Could be more or less, depending on screen size */
-    height: 55%;
     }
 
   .statement {
@@ -484,7 +483,6 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     margin: 20% auto; /* 5% from the top and centered */
     padding: 1.25rem;
     width: 75%; /* Could be more or less, depending on screen size */
-    height: 60%;
     }
 
   #close-form {
@@ -557,7 +555,6 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     margin: 15% auto; /* 5% from the top and centered */
     padding: 1.25rem;
     width: 75%; /* Could be more or less, depending on screen size */
-    height: 75%;
     }
 
   #close-form {
@@ -653,7 +650,6 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     padding: 1.25rem;
     border: 0.063rem solid #888;
     width: 70%; /* Could be more or less, depending on screen size */
-    height: 80%;
     }
 
   #close-about {
