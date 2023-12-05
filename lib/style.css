@@ -178,13 +178,15 @@ body {
 
 .statement {
   font-size: 1.25rem;
+  line-height: 1.786;
+  word-spacing: 0.1rem;
   text-align: center;
 }
 
 .box {
   margin-top: 2rem;
   width: 13.875rem;
-  height: 7.805rem;
+  height: 7.805rem; /*aspec ratio is 270px x 151.888px */
   border-radius: 0.313rem;
   box-shadow: 0.25rem 0.25rem 0.25rem #dd4d19,
     0.25rem 0.25rem 0.25rem #e27c57;
@@ -333,11 +335,11 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
 /* Modal Content/Box 2*/
 #form-content {
   background-color: #fefefe;
-  margin: 5% auto; /* 15% from the top and centered */
+  margin: 10% auto; /* 15% from the top and centered */
   padding: 1.25rem;
   border: 0.063rem solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
-  height: 80%;
+  height: 50%;
   box-shadow: 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2),
     0 0.374rem 1.25rem 0 rgba(0, 0, 0, 0.19);
   animation-name: animateopac;
@@ -381,6 +383,8 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
 
   .main-container .title {
     font-size: 3rem;
+    line-height: normal;
+    word-spacing: 0.5rem;
   }
 
   .main-container .phrase {
@@ -399,6 +403,17 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     height: 9.5rem;
   }
 
+  #form-content {
+    margin: 10% auto; /* 5% from the top and centered */
+    width: 75%; /* Could be more or less, depending on screen size */
+    height: 55%;
+    }
+
+  .statement {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    word-spacing: 0.15rem;
+  }
 
   #close-form {
     top: 0.4rem;
@@ -426,6 +441,7 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
 
   .main-container .title {
     font-size: 4rem;
+    line-height: normal;
   }
 
   .main-container .phrase {
@@ -464,6 +480,12 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     height: 15.5rem;
   }
 
+  #form-content {
+    margin: 20% auto; /* 5% from the top and centered */
+    padding: 1.25rem;
+    width: 75%; /* Could be more or less, depending on screen size */
+    height: 60%;
+    }
 
   #close-form {
      top: 0.4rem;
@@ -471,20 +493,20 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     }
 
   .statement {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 2.5rem;
     word-spacing: 0.5rem;
   }
 
   .box {
     width: 24.875rem;
-    height: 11.375rem; 
+    height: 13.912rem; 
   }
  
   .bttn-3 {
-    font-size: 2rem;
-    width: 21.5rem;
-    height: 7.063rem;
+    font-size: 1.75rem;
+    width: 13.5rem;
+    height: 5.063rem;
   }
 
   .poetry {
@@ -509,11 +531,13 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
 
   .main-container .title {
     font-size: 5rem;
+    line-height: normal;
   }
 
   .main-container .phrase {
     top: 31.25rem;
     font-size: 3.15rem;
+    line-height: normal;
   }
 
   #grid-container {
@@ -529,6 +553,12 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     height: 25.5rem;
   }
 
+  #form-content {
+    margin: 15% auto; /* 5% from the top and centered */
+    padding: 1.25rem;
+    width: 75%; /* Could be more or less, depending on screen size */
+    height: 75%;
+    }
 
   #close-form {
     top: 0.4rem;
@@ -537,21 +567,21 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
 
   .statement {
     font-size: 2rem;
-    line-height: 4rem;
+    line-height: 2.857rem;
     word-spacing: 0.9rem;
   }
 
   .box {
-    width: 37.875rem;
-    height: 15.375rem;
+    width: 28.875rem;
+    height: 16.149rem; 
   }
 
   .bttn-3 {
     font-size: 2rem;
-    line-height: 3rem;
-    word-spacing: 0.9rem;
-    width: 30.5rem;
-    height: 13.063rem;
+    line-height: 2rem;
+    word-spacing: 0.5rem;
+    width: 17.5rem;
+    height: 6.063rem;
   }
 
   .poetry {
@@ -618,6 +648,14 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
   }
 
 
+  #form-content {
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 1.25rem;
+    border: 0.063rem solid #888;
+    width: 70%; /* Could be more or less, depending on screen size */
+    height: 80%;
+    }
+
   #close-about {
   top: 0.4rem;
   margin-right: 0.1rem;
@@ -629,8 +667,8 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
     }
 
   .statement {
-    font-size: 3rem;
-    line-height: 2.5rem;
+    font-size: 2rem;
+    line-height: normal;
     word-spacing: 0.5rem;
   }
 
@@ -641,9 +679,10 @@ depois, colocar o close dentro de uma div. no css, definir o display como flex, 
   }
 
   .bttn-3 {
-    font-size: 2rem;
-    width: 21.5rem;
-    height: 7.063rem;
-    margin-top: 0rem;
+    font-size: 1.5rem;
+    word-spacing: normal;
+    width: 15.5rem;
+    height: 5.063rem;
+    margin-top: 1rem;
   }
 }
