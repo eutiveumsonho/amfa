@@ -40,7 +40,7 @@ async function handler(req: Request): Promise<Response> {
     'css': 'text/css',
     'js': 'text/javascript',
     'html': 'text/html',
-    'ttf': 'font/ttf',
+    'ttf': 'text/css',
     'jpeg': 'image/jpeg',
     'jpg': 'image/jpeg'
   }
