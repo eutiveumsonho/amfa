@@ -1,0 +1,67 @@
+@keyframes animateopac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#modal-overlay {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  animation-name: animateopac;
+  animation-duration: 0.8s;
+}
+
+#modal-container {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 70%;
+  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2),
+    0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
+}
+
+#modal-header {
+  color:#06be81;
+  font-size: 1.5rem;
+}
+
+#close-modal {
+  color: #aaa;
+  display: grid;
+  float:right;
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 2.1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-color: #aaa;
+  border-radius: 90rem;
+  border-style: dotted;
+  align-self: center;
+   margin:0.07rem;
+  padding: 0.05rem;
+}
+
+#close-modal:hover,
+#close-modal:focus {
+  color: #dd4d19;
+  border-color: #7a7979;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modal-content {
+  margin-top: 1rem;
+}
