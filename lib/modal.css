@@ -27,10 +27,22 @@
   margin: 15% auto;
   padding: 1rem;
   border-radius: 1rem;
-  width: 70%;
-  height: 90%;
+  width: 75%;
+  height: 70%;
   box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2),
     0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
+  overflow:hidden;
+  
+}
+
+#modal-header{
+  height: 2rem;
+  position: absolute;
+  width: inherit;
+  background-color: white;
+  padding-bottom: 0.5rem;
+  margin-top: -0.5rem;
+  border-radius: inherit;
 }
 
 #close-modal {
@@ -48,6 +60,7 @@
   align-self: center;
   margin: 0.07rem;
   padding: 0.05rem;
+  align-self: center;
 }
 
 #close-modal:hover,
@@ -58,11 +71,64 @@
   cursor: pointer;
 }
 
-#modal-content {
-  margin-top: 1rem;
-}
 
 #my-iframe {
   border: 0;
-  scroll-behavior: none;
+  margin-top: 2rem;
+}
+
+@media only screen and (min-width: 414px) {
+  #modal-container {
+    margin: 15% auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 70%;
+    height: 70%;
+  }
+
+ 
+}
+
+@media only screen and (min-width: 600px) {
+  #modal-container {
+    margin: 15% auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 70%;
+    height: 50%;
+    padding-top: 2rem ;
+
+  }
+
+  #modal-content {
+    padding-top: 4rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #modal-container {
+    margin: 15% auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 70%;
+    height: 90%;
+  }
+
+  #modal-content {
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #modal-container {
+    margin: 5% auto;
+    border-radius: 1rem;
+    width: 70%;
+    height: 60%;
+    top: 2rem;
+  }
+
+  #modal-content {
+    margin-top: 1rem;
+  }
 }

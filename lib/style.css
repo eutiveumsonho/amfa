@@ -10,12 +10,17 @@ body {
 
 .flex {
   display: flex;
-  /* Flex is a row by default (analogous to flex-direction). */
   justify-content: center;
   align-items: center;
 }
 
 .column {
+  flex-direction: column;
+}
+
+.flex-column {
+  display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -84,8 +89,7 @@ body {
   width: 15rem;
   height: 3.438rem;
   position: absolute;
-  margin-left: 0rem;
-
+  left: 0;
   border-color: transparent;
   border-radius: 0.188rem;
 }
@@ -102,9 +106,9 @@ body {
   text-align: center;
   width: 18.438rem;
   height: 3.438rem;
-  position: relative;
-  top: 2.1rem;
-  margin-left: 0rem;
+  position: absolute;
+  left: 0;
+  margin-top: 2rem;
   border-color: transparent;
   border-radius: 0.188rem;
 }
@@ -156,74 +160,6 @@ body {
   background-color: rgba(224, 109, 67, 0.937);
 }
 
-.flex-column {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-#form-letter {
-  font-size: 0.938rem;
-  color: #dd4d19;
-  margin-top: 1.25rem;
-  /*text-align: auto; */
-  text-shadow: 0.25rem 0.25rem 0.25rem #00000040;
-}
-
-.statement {
-  font-size: 1.25rem;
-  line-height: 1.786;
-  word-spacing: 0.1rem;
-  text-align: center;
-}
-
-.box {
-  margin-top: 2rem;
-  width: 13.875rem;
-  height: 7.805rem; /*aspec ratio is 270px x 151.888px */
-  border-radius: 0.313rem;
-  box-shadow: 0.25rem 0.25rem 0.25rem #dd4d19, 0.25rem 0.25rem 0.25rem #e27c57;
-  resize: vertical;
-  padding: 2%;
-  font-size: 1.2rem;
-  font-family: SpecialElite;
-  border: 0.2rem dashed #dd4d19;
-  letter-spacing: 0.2rem;
-  word-spacing: 0.4rem;
-  line-height: 1.4rem;
-}
-
-.box:hover,
-.box:focus {
-  color: #e27c57;
-  outline: none !important;
-  border-color: #4dbba6;
-  box-shadow: 0 0 10px #4dbba6;
-}
-
-::selection {
-  color: white;
-  background-color: #e27c57;
-}
-
-.bttn-3 {
-  box-shadow: 0.4rem 0.25rem 0.25rem #00000040,
-    0.188rem 0.188rem 0.188rem #00000052;
-  background-color: #dd4d19;
-  color: #ffffff;
-  font-family: SpecialElite;
-  font-size: 1.25rem;
-  font-weight: 20;
-  text-shadow: 0.313rem 0.313rem 0.313rem #00000050;
-  width: 10rem;
-  height: 4.063rem;
-  border-color: transparent;
-  border-radius: 0.063rem;
-  position: relative;
-  top: 0.625rem;
-  margin-top: 1rem;
-}
-
 .poetry {
   font-size: 1.2rem;
   color: #4dbba6;
@@ -235,81 +171,6 @@ body {
   margin-bottom: 15rem;
 }
 
-#about-title {
-  color: #4dbba6;
-  text-shadow: 0.25rem 0.25rem 0.25rem #00000034;
-  word-spacing: 0.6rem;
-}
-
-#about-content {
-  color: #dd4d19;
-  text-shadow: 0.25rem 0.25rem 0.25rem #00000034;
-  text-align: center;
-  word-spacing: 0.6rem;
-  line-height: 2rem;
-  /* 
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 1.25rem;
-  border-radius: 1rem;
-  width: 70%;
-  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2),
-    0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
- */
-}
-
-/* The Modal (background) 2 */
-#form-modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box 2*/
-#form-content {
-  background-color: #fefefe;
-  margin: 10% auto; /* 15% from the top and centered */
-  padding: 1.25rem;
-  border: 0.063rem solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-  height: fit-content;
-  box-shadow: 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2),
-    0 0.374rem 1.25rem 0 rgba(0, 0, 0, 0.19);
-  animation-name: animateopac;
-  animation-duration: 0.8s;
-}
-
-/* The Close Button 2*/
-#close-form {
-  color: #aaa;
-  float: right;
-  font-size: 2.5rem;
-  text-align: center;
-  line-height: 2.1rem;
-  position: relative;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-color: #aaa;
-  border-radius: 90rem;
-  border-style: dotted;
-  margin-top: 0.2rem;
-  margin-right: 0.2rem;
-  align-self: center;
-}
-
-#close-form:hover,
-#close-form:focus {
-  color: #dd4d19;
-  text-decoration: none;
-  cursor: pointer;
-}
 /* Use https://calculateaspectratio.com/ to calculate aspect ratio OK*/
 
 /* Large phones, 414px and up) */
@@ -339,27 +200,6 @@ body {
   #grid-container > div {
     width: 9.5rem;
     height: 9.5rem;
-  }
-
-  #form-content {
-    margin: 10% auto; /* 5% from the top and centered */
-    width: 75%; /* Could be more or less, depending on screen size */
-  }
-
-  .statement {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    word-spacing: 0.15rem;
-  }
-
-  #close-form {
-    top: 0.4rem;
-    margin-right: 0.1rem;
-  }
-
-  .box {
-    width: 16.875rem;
-    height: 9.493rem;
   }
 }
 
@@ -398,8 +238,9 @@ body {
     width: 29rem;
     height: 6rem;
     font-size: 3rem;
-    position: relative;
-    top: 5.56rem;
+
+    left: 0;
+    margin-top: 5rem;
   }
 
   #grid-container {
@@ -415,40 +256,13 @@ body {
     height: 15.5rem;
   }
 
-  #form-content {
-    margin: 20% auto; /* 5% from the top and centered */
-    padding: 1.25rem;
-    width: 75%; /* Could be more or less, depending on screen size */
-  }
-
-  #close-form {
-    top: 0.4rem;
-    margin-right: 0.45rem;
-  }
-
-  .statement {
-    font-size: 1.8rem;
-    line-height: 2.5rem;
-    word-spacing: 0.5rem;
-  }
-
-  .box {
-    width: 24.875rem;
-    height: 13.912rem;
-  }
-
-  .bttn-3 {
-    font-size: 1.75rem;
-    width: 13.5rem;
-    height: 5.063rem;
-  }
-
   .poetry {
     font-size: 1.875rem;
     position: relative;
     top: 12rem;
     line-height: 4rem;
     word-spacing: 1rem;
+    
   }
 }
 
@@ -487,36 +301,6 @@ body {
     height: 25.5rem;
   }
 
-  #form-content {
-    margin: 15% auto; /* 5% from the top and centered */
-    padding: 1.25rem;
-    width: 75%; /* Could be more or less, depending on screen size */
-  }
-
-  #close-form {
-    top: 0.4rem;
-    margin-right: 0.9rem;
-  }
-
-  .statement {
-    font-size: 2rem;
-    line-height: 2.857rem;
-    word-spacing: 0.9rem;
-  }
-
-  .box {
-    width: 28.875rem;
-    height: 16.149rem;
-  }
-
-  .bttn-3 {
-    font-size: 2rem;
-    line-height: 2rem;
-    word-spacing: 0.5rem;
-    width: 17.5rem;
-    height: 6.063rem;
-  }
-
   .poetry {
     font-size: 2.875rem;
     position: relative;
@@ -551,8 +335,8 @@ body {
     width: 20rem;
     height: 5.5rem;
     font-size: 3.5rem;
-    margin-top: -39rem;
-    margin-left: -0.8rem;
+    top: 7.5rem;
+    left: 0;
     position: absolute;
     display: grid;
     align-items: center;
@@ -564,10 +348,10 @@ body {
     width: 28rem;
     height: 6rem;
     font-size: 2.5rem;
-    margin-top: -4.5rem;
-    margin-left: -2.5rem;
+    left:0;
+    top: -4.5rem;
     position: absolute;
-    display: grid;
+    /* display: grid; */
     align-items: center;
     border-radius: 0.5rem;
   }
@@ -584,40 +368,7 @@ body {
     height: 14.5rem;
   }
 
-  #form-content {
-    margin: 5% auto; /* 5% from the top and centered */
-    padding: 1.25rem;
-    border: 0.063rem solid #888;
-    width: 70%; /* Could be more or less, depending on screen size */
-  }
-
-  #close-about {
-    top: 0.4rem;
-    margin-right: 0.1rem;
-  }
-
-  #close-form {
-    top: 0.4rem;
-    margin-right: 1.3rem;
-  }
-
-  .statement {
-    font-size: 2rem;
-    line-height: normal;
-    word-spacing: 0.5rem;
-  }
-
-  .box {
-    margin-top: 2rem;
-    width: 35.875rem;
-    height: 18.375rem;
-  }
-
-  .bttn-3 {
-    font-size: 1.5rem;
-    word-spacing: normal;
-    width: 15.5rem;
-    height: 5.063rem;
-    margin-top: 1rem;
+  .poetry {
+    padding: 2rem;
   }
 }

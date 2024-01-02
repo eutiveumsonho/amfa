@@ -8,7 +8,7 @@
       charset="UTF-8"
       lang="pt-BR"
     />
-    <script src="./lib/script.js"></script>
+    <script src="./lib/form.js"></script>
   </head>
   <body>
     <div class="flex-column" id="form-content">
@@ -32,6 +32,11 @@
         <button class="bttn-3" type="submit">Enviar para o futuro</button>
       </form>
       <p id="result"></p>
+      <p id="citation">
+        "Todos ansiamos por amor – todos o buscamos –, mesmo quando não temos
+        esperança de que ele possa ser de fato encontrado".
+      </p>
+      <p id="bell-hooks">- Bell Hooks</p>
     </div>
   </body>
   <style>
@@ -45,6 +50,7 @@
       flex-direction: column;
       justify-content: center;
     }
+
     .flex-column {
       display: flex;
       flex-direction: column;
@@ -66,6 +72,7 @@
     }
 
     #txt-area.box {
+      margin-top: 2rem;
       width: 13.875rem;
       height: 7.805rem; /*aspec ratio is 270px x 151.888px */
       border-radius: 0.313rem;
@@ -84,8 +91,8 @@
       align-self: center;
     }
 
-    .box:hover,
-    .box:focus {
+    #txt-area.box:hover,
+    #txt-area.box:focus {
       color: #e27c57;
       outline: none !important;
       border-color: #4dbba6;
@@ -112,8 +119,102 @@
       border-radius: 0.063rem;
       position: relative;
       top: 0.625rem;
-      margin-top: 1rem;
+      margin-top: 3rem;
       align-self: center;
+    }
+
+    #citation {
+      font-family: SpecialElite;
+      font-size: 0.9rem;
+      color: #e27c57;
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    #bell-hooks {
+      font-family: SpecialElite;
+      font-style: bold;
+      font-size: 0.9rem;
+      text-align: center;
+      color: #dd4d19;
+      margin-top: 0rem;
+      margin-bottom: 1rem;
+    }
+
+    @media only screen and (min-width: 414px) {
+      .statement {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        word-spacing: 0.15rem;
+      }
+
+      #txt-area.box {
+        width: 16.875rem;
+        height: 9.493rem;
+      }
+    }
+
+    @media only screen and (min-width: 567px) {
+      .statement {
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        word-spacing: 0.5rem;
+      }
+
+      #txt-area.box {
+        width: 24.875rem;
+        height: 13.912rem;
+      }
+
+      .bttn-3 {
+        font-size: 1.75rem;
+        width: 13.5rem;
+        height: 5.063rem;
+      }
+    }
+
+    @media only screen and (min-width: 896px) {
+      .statement {
+        font-size: 2rem;
+        line-height: 2.857rem;
+        word-spacing: 0.9rem;
+      }
+
+      #txt-area.box {
+        width: 35.875rem;
+        height: 18.375rem;
+      }
+
+      .bttn-3 {
+        font-size: 2rem;
+        line-height: 2rem;
+        word-spacing: 0.5rem;
+        width: 17.5rem;
+        height: 6.063rem;
+      }
+    }
+
+    @media only screen and (min-width: 1008px) {
+      .statement {
+        font-size: 2rem;
+        line-height: normal;
+        word-spacing: 0.5rem;
+      }
+
+      #txt-area.box {
+        margin-top: 2rem;
+        width: 35.875rem;
+        height: 18.375rem;
+      }
+
+      .bttn-3 {
+        font-size: 1.5rem;
+        word-spacing: normal;
+        width: 15.5rem;
+        height: 5.063rem;
+        margin-top: 1rem;
+      }
     }
   </style>
 </html>

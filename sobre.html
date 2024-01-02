@@ -11,7 +11,7 @@
   </head>
   <body>
     <div id="about-content">
-      <h1 id="about-title">"O QUE É O AMFA?"</h1>
+      <h1 id="about-title">O QUE É O AMFA?</h1>
       <p id="about-text">
         AMFA (Amor, Meu Futuro Amor) é uma instalação artística virtual que
         compila cartas de pessoas para o futuro amor, ou o grande amor. Se
@@ -29,19 +29,81 @@
       src: url(./public/SpecialElite-Regular.ttf);
     }
 
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .column {
+      flex-direction: column;
+    }
+
     #about-title {
       font-family: SpecialElite;
       color: #06be81;
       font-size: 1.5rem;
+      padding-top: 1rem;
+      text-align: center;
     }
 
-    #about-content {
+    #about-text {
+      font-size: 0.8rem;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
       font-family: SpecialElite;
       color: #dd4d19;
       text-shadow: 0.25rem 0.25rem 0.25rem #00000034;
       text-align: center;
       word-spacing: 0.6rem;
       line-height: 2rem;
+    }
+
+    @media only screen and (min-width: 420px) {
+      #about-title {
+        padding-top: 1rem;
+        font-size: 2rem;
+      }
+
+      #about-text {
+        font-size: 1.2rem;
+        line-height: 2.1rem;
+      }
+    }
+
+    @media only screen and (min-width: 500px) {
+      #about-title {
+        padding-top: 0rem;
+        font-size: 2.5rem;
+      }
+
+      #about-text {
+        font-size: 1.5rem;
+        line-height: 4.5rem;
+        word-spacing: 1.5rem;
+      }
+    }
+    @media only screen and (min-width: 716px) {
+      #about-title {
+        padding-top: 5rem;
+      }
+
+      #about-text {
+        font-size: 1.5rem;
+        line-height: 3rem;
+        padding-top: 3rem;
+      }
+    }
+
+    @media only screen and (min-width: 896px) {
+      #about-title {
+        padding-top: 0;
+      }
+
+      #about-text {
+        font-size: 1.5rem;
+        line-height: 4rem;
+      }
     }
   </style>
 </html>
