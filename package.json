@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "ariakit": "^2.0.0-next.44"
-  },
   "devDependencies": {
     "eslint": "^8.55.0"
   }
