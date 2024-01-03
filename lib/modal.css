@@ -31,11 +31,10 @@
   height: 70%;
   box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.2),
     0 0.375rem 1.25rem 0 rgba(0, 0, 0, 0.19);
-  overflow:hidden;
-  
+  overflow: hidden;
 }
 
-#modal-header{
+#modal-header {
   height: 2rem;
   position: absolute;
   width: inherit;
@@ -71,7 +70,6 @@
   cursor: pointer;
 }
 
-
 #my-iframe {
   border: 0;
   margin-top: 2rem;
@@ -85,8 +83,6 @@
     width: 70%;
     height: 70%;
   }
-
- 
 }
 
 @media only screen and (min-width: 600px) {
@@ -96,8 +92,7 @@
     border-radius: 1rem;
     width: 70%;
     height: 50%;
-    padding-top: 2rem ;
-
+    padding-top: 2rem;
   }
 
   #modal-content {
