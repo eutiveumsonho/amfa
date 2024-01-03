@@ -1,175 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta: charset= "utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="keywords" content="HTML, CSS" />
-    <meta name="description" content="..." />
-    <title>AMOR, MEU FUTURO AMOR</title>
-
-    <style>
-      img.profile {
-        width: 500px;
-        margin-left: 360px;
-        border-radius: 400px;
-        margin-top: 80px;
-        
-      }
-
-      p.username {
-        font-weight: bold;
-        font-size: 100px;
-        color: #4dbba6;
-        text-align: center;
-      }
-      
-
-      p.frase {
-        font-weight: lighter;
-        font-size: 45px;
-        color: #4dbba6;
-        margin-top: 20px;
-        margin-left: 130px;
-      }
-
-      p.line{
-        color: #4dbba6;
-        margin-left: 250px;
-      }
-      em {
-        color: #ff6933;
-        font-style: normal;
-      }
-      img.carta1 {
-        margin-top: 5px;
-        width: 550px;
-      
-      }
-      img.carta2 {
-        width:700px
-  
-      }
-
-      label {
-        color:#4dbba6;
-        font-size: 30px;
-        font-style: normal;
-      }
-      
-      /*input[type="text"] {
-      width: 200px;
-      }*/
-      /*.resultado {
-        color:#ff6933;
-        font-size: 20px;
-      }*/
-      textarea {
-      padding: 10px;
-      max-width: 100%;
-      line-height: 1.5;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      box-shadow: 1px 1px 1px #999;
-      }
-      button {
-      background-color: #ff6933;
-      border: none;
-      color:#c6e7e1 ;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      }
-      footer {
-        color:#ff6933;
-        font-size: 20px;
-      }
-
-      .flex-center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .column {
-        flex-direction: column;
-      }
-
-      .row { 
-        flex-direction: row;
-      }
-    </style>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      user-scalable="no"
+      charset="UTF-8"
+      lang="pt-BR"
+    />
+    <link rel="stylesheet" href="./lib/style.css" />
+    <link rel="stylesheet" href="./lib/modal.css" />
+    <link rel="stylesheet" href="./public/SpecialElite-Regular.ttf" />
+    <script async src="./lib/script.js"></script>
+    <script async src="./lib/modal.js"></script>
   </head>
   <body>
-    <img class="profile" src="juamor.jpg" alt="imagem do seu futuro amor">
-    <p class="username"><em>Amor</em>, meu <br> <i>futuro</i> amor...</br></p>
-    <p class="frase">(juntado de cartas para amores que ainda não existem)</p>
-    <p class="line">___________________________________________________________________________________________________</p>
-   <!-- <audio src= "audio gabriel nabuco.ogg" type= "audio/ogg" alt="audio carta 2">-->
-    <div class="flex-center row">
-      <img class="carta1"src="primeiracarta.jpeg" alt="carta 1" float="left">
-      <img class="carta2" src="carta02.jpg" alt="carta 2" float="right"> <br></br><br></br>
+    <div class="main-container flex column">
+      <div class="header flex column">
+        <img class="main-img" src="./public/main-image.jpg" />
+        <p class="title">
+          <span class="title-red">Amor,</span>
+          <span class="title-blue"
+            >meu <br />
+            <i>futuro</i></span
+          >
+          <span class="title-space"></span>
+          <span class="title-blue">amor...</span>
+        </p>
+
+        <p class="phrase">juntado de cartas para amores por vir</p>
+      </div>
     </div>
-    <!--
-    <a
-      target="_blank"
-      class="siga-btn"
-      href="https://www.instagram.com/juliaccrezende/"
-      >Caiu na rede é peixe
-    </a>
-    <a href="amorfuturoamor/primeiracarta.jpeg" download>
-      download da primeira carta de amor
-    </a>
-    <a
-      target="_blank"
-      class="email-btn"
-      href="mailto:amormeufuturoamor@gmail.com"
-      >Envie aqui sua carta para um futuro amor</a
-      -->
-      <div class="flex-center column">
-        <form id="form-carta">
-          <div class="flex-center">
-            <label for="txt-carta"> Escreva aqui a sua carta para um futuro amor</label>
-          </div>
-          <br></br>
-          <textarea type="text" id="txt-carta" class="caixa" name="carta" maxlength="6000" rows="10" cols="100" required></textarea>
-          <br></br>
-          <div class="flex-center">
-            <button type="submit">Enviar para o futuro</button>
-          </div>
-        </form>
-        <p id="resultado"> 
-        </div>
-      <footer>
-        <p>Para um amor existir no futuro, primeiro é preciso imaginá-lo</p>
-O AMFA é uma instalação artística virtual  que compila cartas de pessoas para o futuro amor, ou o grande amor, e também uma intervenção urbana, que espalha lambes dessas cartas pela cidade. O projeto nasce na cidade de Salvador - Bahia, e invoca seus interlocutores (e possíveis futuros colaboradores) a compartilharem perspectivas poéticas da idéia, (ou existência), de futuros/possíveis/grandes amores.
-<p></p>
-      </footer>
-    <script>
-      const form = document.getElementById("form-carta")
-
-      form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        const formData = new FormData(this);
-        const entries = formData.entries();
-        const data = Object.fromEntries(entries);
-
-        console.log({ data })
-
-        fetch("/", {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: {
-            "Content-Type": "application/json"
-          }
-        })
-          .then(res => { 
-            document.getElementById("resultado").innerHTML = "Carta enviada!"
-          })
-          .catch(/**/);
-      });
-    </script>
+    <modal-component> </modal-component>
+    <br />
+    <br />
+    <button class="modal-disclosure bttn-1" id="about-bttn">sobre</button>
+    <br />
+    <br />
+    <button class="modal-disclosure bttn-2" id="write-bttn">
+      envie sua carta
+    </button>
+    <br />
+    <div id="grid-container" class="grid flex column">
+      <div id="post1"></div>
+      <div id="post2"></div>
+      <div id="post3"></div>
+      <div id="post4"></div>
+      <div id="post5"></div>
+      <div id="post6"></div>
+      <div id="post7"></div>
+      <div id="post8"></div>
+    </div>
   </body>
+  <footer>
+    <div class="footer flex column">
+      <p class="poetry">
+        Para um amor existir no futuro, primeiro é preciso imaginá-lo.
+      </p>
+    </div>
+  </footer>
 </html>

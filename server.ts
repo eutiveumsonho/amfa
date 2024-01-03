@@ -34,6 +34,19 @@ async function handler(req: Request): Promise<Response> {
   const filePath = url.pathname === "/" ? "/index.html" : url.pathname;
   const absPath = `${Deno.cwd()}/${filePath}`;
 
+
+  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+  const mimeMap = {
+    'css': 'text/css',
+    'js': 'text/javascript',
+    'html': 'text/html',
+    'ttf': 'text/css',
+    'jpeg': 'image/jpeg',
+    'jpg': 'image/jpeg'
+  }
+
+  const mimeType = mimeMap[filePath.substr(filePath.lastIndexOf('.') + 1)] ?? 'text/html'
+
   try {
     const file = await Deno.open(absPath);
     const fileInfo = await Deno.stat(absPath);
@@ -41,7 +54,7 @@ async function handler(req: Request): Promise<Response> {
     return new Response(file.readable, {
       status: 200,
       headers: new Headers({
-        "Content-Type": "text/html",
+        "Content-Type": mimeType,
         "Content-Length": fileInfo.size.toString(),
       }),
     });

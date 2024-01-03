@@ -176,3 +176,6 @@ dist
 
 # Work in progress local doc
 WIP.md
+
+#vscode files
+.vscode

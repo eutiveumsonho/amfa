@@ -1,0 +1,374 @@
+@font-face {
+  font-family: SpecialElite;
+  src: url(../public/SpecialElite-Regular.ttf);
+}
+body {
+  font-family: SpecialElite;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.flex-column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-container {
+  background-color: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container .main-img {
+  width: 18.438rem;
+  height: 11.531rem;
+  box-shadow: 0rem 0.625rem 0.625rem #00000059;
+  margin-top: 2.5rem;
+  border-radius: 25rem;
+  display: flex;
+}
+
+.main-container .title {
+  width: 100%;
+  text-shadow: 0rem 0.25rem 0.25rem #00000040;
+  font-weight: 400;
+  color: transparent;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.063rem;
+  line-height: normal;
+}
+
+.main-container .title-red {
+  color: #dd4d19;
+}
+
+.main-container .title-blue {
+  color: rgb(6, 190, 129);
+  /* color: #4dbba6 */
+}
+
+.main-container .title-space {
+  color: #ff6933;
+}
+
+.main-container .phrase {
+  top: 31.25rem;
+  text-shadow: 0rem 0.25rem 0.25rem #00000040;
+  font-family: SpecialElite;
+  font-weight: 400;
+  color: #dd4d19f0;
+  font-size: 1.25rem;
+  text-align: center;
+  letter-spacing: 0.063rem;
+  line-height: 1.5rem;
+  word-spacing: 0.5rem;
+}
+
+.bttn-1 {
+  background-image: url("../public/bttn1.jpg");
+  background-repeat: no-repeat;
+  box-shadow: 0.25rem 0.25rem 0.25rem #00000040,
+    0.25rem 0.25rem 0.25rem #00000040;
+  color: #ffffff;
+  font-family: SpecialELite;
+  font-size: 2.25rem;
+  text-shadow: 0.25rem 0.25rem 0.25rem #00000040;
+  width: 15rem;
+  height: 3.438rem;
+  position: absolute;
+  left: 0;
+  border-color: transparent;
+  border-radius: 0.188rem;
+}
+
+.bttn-2 {
+  background-image: url("../public/bttn2.jpg");
+  background-repeat: no-repeat;
+  box-shadow: 0.25rem 0.25rem 0.25rem #00000040,
+    0.25rem 0.25rem 0.25rem #00000052;
+  color: #ffffff;
+  font-family: SpecialELite;
+  font-size: 1.875rem;
+  text-shadow: 0.25rem 0.25rem 0.25rem #00000040;
+  text-align: center;
+  width: 18.438rem;
+  height: 3.438rem;
+  position: absolute;
+  left: 0;
+  margin-top: 2rem;
+  border-color: transparent;
+  border-radius: 0.188rem;
+}
+
+#grid-container {
+  margin-top: 3.125rem;
+  display: grid;
+  grid: repeat(4, 9.375rem) / auto-flow 9.375rem;
+  justify-items: center;
+  grid-auto-columns: center;
+  position: relative;
+  top: 5.625rem;
+}
+
+#grid-container > div {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+#post1 {
+  background-color: rgb(6, 190, 129);
+}
+
+#post2 {
+  background-color: #e27c57;
+}
+
+#post3 {
+  background-color: rgba(61, 212, 174, 0.705);
+}
+
+#post4 {
+  background-color: #dd4d19;
+}
+
+#post5 {
+  background-color: rgb(142, 223, 196);
+}
+
+#post6 {
+  background-color: #dd4d19;
+}
+
+#post7 {
+  background-color: rgba(6, 190, 129, 0.815);
+}
+
+#post8 {
+  background-color: rgba(224, 109, 67, 0.937);
+}
+
+.poetry {
+  font-size: 1.2rem;
+  color: #4dbba6;
+  text-shadow: 0.25rem 0.25rem 0.25rem #00000040;
+  text-align: center;
+  position: relative;
+  top: 7.5rem;
+  line-height: 3rem;
+  margin-bottom: 15rem;
+}
+
+/* Use https://calculateaspectratio.com/ to calculate aspect ratio OK*/
+
+/* Large phones, 414px and up) */
+@media only screen and (min-width: 414px) {
+  .main-container .main-img {
+    width: 23.438rem;
+    height: 14.619rem;
+  }
+
+  .main-container .title {
+    font-size: 3rem;
+    line-height: normal;
+    word-spacing: 0.5rem;
+  }
+
+  .main-container .phrase {
+    margin-top: 0rem;
+    font-size: 1.25rem;
+  }
+
+  #grid-container {
+    grid: repeat(4, 12.375rem) / auto-flow 12.375rem;
+    position: relative;
+    top: 5.625rem;
+  }
+
+  #grid-container > div {
+    width: 9.5rem;
+    height: 9.5rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) OK */
+@media only screen and (min-width: 600px) {
+  body {
+    max-width: 100%;
+  }
+
+  .main-container .main-img {
+    width: 33.438rem;
+    height: 20.856rem;
+  }
+
+  .main-container .title {
+    font-size: 4rem;
+    line-height: normal;
+  }
+
+  .main-container .phrase {
+    top: 31.25rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    word-spacing: 0.5rem;
+  }
+
+  .bttn-1 {
+    background-image: url("../public/bttn1-ipad.jpg");
+    width: 20rem;
+    height: 6rem;
+    font-size: 3.5rem;
+  }
+
+  .bttn-2 {
+    background-image: url("../public/bttn2-ipad.jpg");
+    width: 29rem;
+    height: 6rem;
+    font-size: 3rem;
+
+    left: 0;
+    margin-top: 5rem;
+  }
+
+  #grid-container {
+    margin-top: 10rem;
+    display: grid;
+    grid: repeat(4, 18.375rem) / auto-flow 18.375rem;
+    position: relative;
+    top: 5.625rem;
+  }
+
+  #grid-container > div {
+    width: 15.5rem;
+    height: 15.5rem;
+  }
+
+  .poetry {
+    font-size: 1.875rem;
+    position: relative;
+    top: 12rem;
+    line-height: 4rem;
+    word-spacing: 1rem;
+    
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    max-width: 100%;
+  }
+
+  .main-container .main-img {
+    width: 33.438rem;
+    height: 20.856rem;
+  }
+
+  .main-container .title {
+    font-size: 5rem;
+    line-height: normal;
+  }
+
+  .main-container .phrase {
+    top: 31.25rem;
+    font-size: 3.15rem;
+    line-height: normal;
+  }
+
+  #grid-container {
+    margin-top: 10rem;
+    display: grid;
+    grid: repeat(4, 30.375rem) / auto-flow 30.375rem;
+    position: relative;
+    top: 5.625rem;
+  }
+
+  #grid-container > div {
+    width: 25.5rem;
+    height: 25.5rem;
+  }
+
+  .poetry {
+    font-size: 2.875rem;
+    position: relative;
+    top: 13rem;
+    line-height: 5rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .main-container .main-img {
+    width: 33.438rem;
+    height: 20.856rem;
+    margin-top: 5rem;
+  }
+
+  .main-container .title {
+    font-size: 4rem;
+    word-spacing: 1.3rem;
+    margin-top: 2.65rem;
+  }
+
+  .main-container .phrase {
+    margin-top: -1.5rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    word-spacing: 0.5rem;
+  }
+
+  .bttn-1 {
+    background-image: url("../public/bttn1-ipad.jpg");
+    width: 20rem;
+    height: 5.5rem;
+    font-size: 3.5rem;
+    top: 7.5rem;
+    left: 0;
+    position: absolute;
+    display: grid;
+    align-items: center;
+    border-radius: 0.5rem;
+  }
+
+  .bttn-2 {
+    background-image: url("../public/bttn2-ipad.jpg");
+    width: 28rem;
+    height: 6rem;
+    font-size: 2.5rem;
+    left:0;
+    top: -4.5rem;
+    position: absolute;
+    /* display: grid; */
+    align-items: center;
+    border-radius: 0.5rem;
+  }
+
+  #grid-container {
+    margin-top: -6rem;
+    display: grid;
+    grid: repeat(2, 19.375rem) / auto-flow 19.375rem;
+    position: relative;
+  }
+
+  #grid-container > div {
+    width: 14.5rem;
+    height: 14.5rem;
+  }
+
+  .poetry {
+    padding: 2rem;
+  }
+}
