@@ -7,7 +7,7 @@ const MONGODB_URI = Deno.env.get("MONGODB_URI");
 
 if (!MONGODB_URI) {
   throw new Error(
-    "Please define the MONGODB_URI environment variable inside .env",
+    "Please define the MONGODB_URI environment variable inside .env"
   );
 }
 
@@ -34,18 +34,18 @@ async function handler(req: Request): Promise<Response> {
   const filePath = url.pathname === "/" ? "/index.html" : url.pathname;
   const absPath = `${Deno.cwd()}/${filePath}`;
 
-
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
-  const mimeMap = {
-    'css': 'text/css',
-    'js': 'text/javascript',
-    'html': 'text/html',
-    'ttf': 'text/css',
-    'jpeg': 'image/jpeg',
-    'jpg': 'image/jpeg'
-  }
+  const mimeMap: Record<string, string> = {
+    css: "text/css",
+    js: "text/javascript",
+    html: "text/html",
+    ttf: "text/css",
+    jpeg: "image/jpeg",
+    jpg: "image/jpeg",
+  };
 
-  const mimeType = mimeMap[filePath.substr(filePath.lastIndexOf('.') + 1)] ?? 'text/html'
+  const mimeType =
+    mimeMap[filePath.substr(filePath.lastIndexOf(".") + 1)] ?? "text/html";
 
   try {
     const file = await Deno.open(absPath);

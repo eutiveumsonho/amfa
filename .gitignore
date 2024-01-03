@@ -176,3 +176,15 @@ dist
 
 # Work in progress local doc
 WIP.md
+
+# settings.json
+
+{
+    "deno.enable": true,
+    "deno.lint": true,
+    "deno.unstable": true
+}
+
+#extensions.json
+
+  "recommendations": ["ms-vscode.live-server"]
