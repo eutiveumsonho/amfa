@@ -61,6 +61,6 @@ sh start.sh
 ```
 ## Deployment
 
-This project is provided by [Deno Deploy](https://deno.com/deploy).
+This project is deployed to a Coolify instance with Nixpacks under the parent @eutiveumsonho's organization @url4irl.
 
 
